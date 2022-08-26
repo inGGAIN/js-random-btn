@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Button</title>
+</head>
+<body>
+    <h1>Random Button</h1>
+    <button onclick="alert('you click on static button')">
+        static
+    </button>
+    <button onclick="randomButton(this)">
+        random
+    </button>
+
+    <!-- script -->
+    <script>
+        function randomButton(tombol) {
+            let css = tombol.style;
+            let randomTop = Math.floor(Math.random() * 7 ) + 10;
+            let randomLeft = Math.floor(Math.random() * 75) + 10;
+            css.position = "absolute";
+            css.top = `${randomTop}%`;
+            css.left = `${randomLeft}%`;
+        }
+    </script>
+</body>
+</html>
